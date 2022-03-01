@@ -77,9 +77,29 @@ SQLAlchemy~=1.4.27
 Flask-SQLAlchemy~=2.5.1
 Flask-RESTful~=0.3.9
 Flask-CORS~=3.0.10
-# При использовании в PyCharm необходимо раскомментировать следующую строку
+# При использовании Postgresql в PyCharm необходимо раскомментировать следующую строку
 # psycopg2~=2.9.2
 waitress~=2.0.0
 ```
 #### Внешний вид
 ![App](images/app.png)
+
+#### Выбор базы данных
+
+##### sqlite
+
+```python
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///{}".format(DATABASE_FILE)
+```
+
+###### postgresql
+
+Application
+```python
+app.config["SQLALCHEMY_DATABASE_URI"] = (os.environ.get('DATABASE_URI', 'postgresql://postgres:password@127.0.0.1/'))
+```
+
+Dockerfile
+```Dockerfile
+DATABASE_URI='postgresql://postgres:password@127.0.0.1/'
+```
