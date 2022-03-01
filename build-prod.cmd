@@ -1,1 +1,1 @@
-docker build -t postmanager:production --build-arg APP_MODE=production --build-arg APP_PORT=8081 . 
+docker build -t postmanager:latest -t postmanager:production --build-arg APP_MODE=production --build-arg APP_PORT=8081 . 

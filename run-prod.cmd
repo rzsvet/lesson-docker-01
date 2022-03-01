@@ -1,1 +1,1 @@
-docker run -p 8081:8081 --rm -it postmanager:production
+docker run -p 8081:8081 --rm -it postmanager:latest
