@@ -1,0 +1,1 @@
+docker build -t postmanager:development --build-arg APP_MODE=development --build-arg APP_PORT=8082 .
