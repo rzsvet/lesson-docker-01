@@ -92,7 +92,7 @@ waitress~=2.0.0
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///{}".format(DATABASE_FILE)
 ```
 
-###### postgresql
+##### postgresql
 
 Application
 ```python
